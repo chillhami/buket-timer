@@ -5,33 +5,34 @@ body {
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .container {
+  width: 90%;
   max-width: 500px;
   padding: 20px;
   background: white;
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(255, 99, 132, 0.2);
+  box-sizing: border-box;
 }
 h1 {
   margin-bottom: 30px;
-  font-size: 1.8em;
-}
-.highlight {
-  color: crimson;
-  font-weight: bold;
+  font-size: 1.6em;
 }
 #timer {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 #timer div {
   text-align: center;
+  margin: 10px;
+  min-width: 70px;
 }
 #timer span {
   display: block;
@@ -49,4 +50,12 @@ h1 {
 .small-text {
   font-size: 0.8em;
   color: #999;
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2em;
+  }
+  #timer span {
+    font-size: 1.5em;
+  }
 }
