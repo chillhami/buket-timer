@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Buki 💛</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -17,17 +17,28 @@
     </div>
     <p class="footer small-text">19 Mayıs 2025</p>
   </div>
-  <script src="script.js"></script>
-<script>
-  const count = 20;
-  for (let i = 0; i < count; i++) {
-    const glass = document.createElement('div');
-    glass.className = 'beer';
-    glass.style.left = Math.random() * 100 + 'vw';
-    glass.style.animationDelay = (Math.random() * 5) + 's';
-    document.body.appendChild(glass);
-  }
-</script>
 
+  <script src="script.js"></script>
+  <script>
+    const BEER_COUNT = 20;
+    const BEER_VARIANTS = 7;
+
+    for (let i = 0; i < BEER_COUNT; i++) {
+      const glass = document.createElement('div');
+      glass.className = 'beer';
+      const variant = Math.floor(Math.random() * BEER_VARIANTS) + 1;
+      glass.style.left = Math.random() * 100 + 'vw';
+      glass.style.animationDelay = (Math.random() * 5) + 's';
+
+      const img = document.createElement('img');
+      img.src = `beers/0${variant}.svg`;
+      img.alt = `beer ${variant}`;
+      img.style.width = '100%';
+      img.style.height = '100%';
+
+      glass.appendChild(img);
+      document.body.appendChild(glass);
+    }
+  </script>
 </body>
 </html>
