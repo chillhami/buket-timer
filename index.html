@@ -18,5 +18,16 @@
     <p class="footer small-text">19 Mayıs 2025</p>
   </div>
   <script src="script.js"></script>
+<script>
+  const count = 20;
+  for (let i = 0; i < count; i++) {
+    const glass = document.createElement('div');
+    glass.className = 'beer';
+    glass.style.left = Math.random() * 100 + 'vw';
+    glass.style.animationDelay = (Math.random() * 5) + 's';
+    document.body.appendChild(glass);
+  }
+</script>
+
 </body>
 </html>
